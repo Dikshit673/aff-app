@@ -1,69 +1,50 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+=====================================
 
-Currently, two official plugins are available:
+This is a minimal setup for a React application using TypeScript and Vite. It provides a basic structure for building a production-ready application with Hot Module Replacement (HMR) and ESLint rules.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- React 19.1.0
+- TypeScript 5.8.3
+- Vite 7.0.4
+- ESLint with type-aware lint rules
+- Support for React-specific lint rules with eslint-plugin-react-x and eslint-plugin-react-dom
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Getting Started
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. Clone the repository: `git clone https://github.com/your-username/your-repo-name.git`
+2. Install dependencies: `npm install` or `yarn install`
+3. Start the development server: `npm run dev` or `yarn dev`
+4. Open your browser at `http://localhost:3000`
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Project Structure
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- `src/`: Source code for the application
+  - `App.tsx`: Main application component
+  - `main.tsx`: Entry point for the application
+  - `components/`: Reusable UI components
+  - `features/`: Feature-specific components and logic
+  - `lib/`: Utility functions and helpers
+  - `redux/`: Redux store and actions
+- `public/`: Static assets and index.html
+- `tsconfig.app.json` and `tsconfig.node.json`: TypeScript configuration files
+- `vite.config.ts`: Vite configuration file
+- `package.json`: Project metadata and dependencies
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ESLint Configuration
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+This project uses ESLint with type-aware lint rules. To expand the configuration, you can update the `eslint.config.js` file to include additional rules and plugins.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Contributing
+
+Contributions are welcome! Please submit a pull request with a clear description of the changes.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Acknowledgments
+
+This template was created using the official Vite and React documentation, as well as various open-source projects and tutorials.
