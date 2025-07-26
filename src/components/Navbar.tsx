@@ -12,7 +12,7 @@ const Navbar = () => {
   }, [dispatch]);
 
   return (
-    <section className='sticky top-0 left-0 z-99 w-full bg-gray-600/20 py-4 backdrop-blur-md'>
+    <section className='sticky top-0 left-0 z-50 w-full bg-gray-600/20 py-4 backdrop-blur-md'>
       <div className='mx-auto flex w-9/10 items-center justify-between rounded-lg bg-white px-4 py-1'>
         <div>
           <h1 className='text-2xl font-bold'>AffApp</h1>
